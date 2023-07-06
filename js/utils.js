@@ -47,8 +47,9 @@ function preserveUTMParameters() {
     const link = links[i];
     let href = link.href;
 
-    // Check if the hyperlink already contains query parameters
-    if (href.includes('?')) {
+    if (href.includes('#')) { // Ignore any anchors
+      // Do nothing
+    } else if (href.includes('?')) { // Check if the hyperlink already contains query parameters
       // Preserve the existing parameters and update the 'utm_campaign' and 'utm_source' values if necessary
       href = href.replace(/([&?])utm_campaign=[^&]+/, `$1utm_campaign=${utmCampaign || storedUtmCampaign}`);
       href = href.replace(/([&?])utm_source=[^&]+/, `$1utm_source=${utmSource || storedUtmSource}`);
