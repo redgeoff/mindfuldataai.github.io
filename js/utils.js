@@ -28,8 +28,10 @@ function preserveUTMParameters() {
   const utmSource = urlParams.get('utm_source');
 
   // Check if query string parameters are provided and update the cookie values if so
-  if (utmCampaign && utmSource) {
+  if (utmCampaign) {
     setCookie('utm_campaign', utmCampaign, 30);
+  }
+  if (utmSource) {
     setCookie('utm_source', utmSource, 30);
   }
 
