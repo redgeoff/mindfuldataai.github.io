@@ -1,11 +1,18 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { createRoot } from "react-dom/client";
 import {
   QueryClient,
   QueryClientProvider,
   useMutation,
 } from "@tanstack/react-query";
-import { signInWithGitHub, useAuth, logOut } from "./domains/auth";
+import {
+  signInWithGitHub,
+  signUpWithEmailPassword,
+  signInWithEmailPassword,
+  useAuth,
+  logOut,
+  signInWithGoogle,
+} from "./domains/auth";
 import { Button, Card, Logo } from "./components";
 
 const App = () => {
@@ -63,6 +70,14 @@ const App = () => {
         });
     }
   }, [email]);
+
+  const [inputEmailAddress, setInputEmailAddress] = useState("");
+  const [inputPassword, setInputPassword] = useState("");
+  const [status, setStatus] = useState<{ ok: boolean; message: string } | null>(
+    null,
+  );
+
+  const [isCreatingAccount, setIsCreatingAccount] = useState(true);
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2 bg-gradient-to-r from-[#ff80b5] to-[#9089fc]">
       {/* Card */}
@@ -71,9 +86,98 @@ const App = () => {
         {!email && (
           <>
             <div className="mb-4">
-              Get started with the plugin by signing in.
+              Get started with the plugin by{" "}
+              {isCreatingAccount ? "creating an account" : "signing in"}.
             </div>
-            <Button onClick={signInWithGitHub}>Sign in with GitHub</Button>
+
+            {/* An email and password input */}
+            <div className="mb-4">
+              <input
+                type="email"
+                placeholder="Email"
+                className="w-full px-3 py-2 mb-3 border rounded-md outline-none"
+                value={inputEmailAddress}
+                onChange={(e) => setInputEmailAddress(e.target.value)}
+              />
+              <input
+                type="password"
+                placeholder="Password"
+                className="w-full px-3 py-2 mb-3 border rounded-md outline-none"
+                value={inputPassword}
+                onChange={(e) => setInputPassword(e.target.value)}
+              />
+              <Button
+                onClick={async () => {
+                  setStatus(null);
+                  if (isCreatingAccount) {
+                    const { result } = await signUpWithEmailPassword({
+                      email: inputEmailAddress,
+                      password: inputPassword,
+                    });
+                    if (result == "ConfirmationEmailSent") {
+                      setStatus({
+                        ok: true,
+                        message: "Confirmation email sent",
+                      });
+                    } else if (result.error) {
+                      setStatus({
+                        ok: false,
+                        message: result.error,
+                      });
+                    } else {
+                      setStatus({
+                        ok: false,
+                        message: "Something went wrong",
+                      });
+                    }
+                  } else {
+                    const { errorMessage } = await signInWithEmailPassword({
+                      email: inputEmailAddress,
+                      password: inputPassword,
+                    });
+                    if (errorMessage) {
+                      setStatus({
+                        ok: false,
+                        message: errorMessage,
+                      });
+                    }
+                  }
+                }}
+              >
+                {isCreatingAccount ? "Create account" : "Sign in"}
+              </Button>
+
+              {/* Render status */}
+              {status && (
+                <div className={status.ok ? "text-green-500" : "text-red-500"}>
+                  {status.message}
+                </div>
+              )}
+            </div>
+            <hr className="my-4 border-gray-300" />
+            {/* already have an account? */}
+            <div className="mb-4">
+              <button
+                className="text-blue-500 hover:underline"
+                onClick={() => setIsCreatingAccount(!isCreatingAccount)}
+              >
+                {isCreatingAccount
+                  ? "Already have an account?"
+                  : "Create an account"}
+              </button>
+            </div>
+            {/* A divider with "or" in the center */}
+            <div className="flex items-center justify-center mb-4">
+              <div className="w-full h-px bg-gray-300"></div>
+              <div className="px-3 text-gray-500">or</div>
+              <div className="w-full h-px bg-gray-300"></div>
+            </div>
+            <Button onClick={signInWithGitHub}>
+              Sign {isCreatingAccount ? "up" : "in"} with GitHub
+            </Button>
+            <Button onClick={signInWithGoogle}>
+              Sign {isCreatingAccount ? "up" : "in"} with Google
+            </Button>
           </>
         )}
         {email && (

@@ -1,3 +1,8 @@
 export { useAuth } from "./hooks/useAuth";
-export { signInWithGitHub } from "./services/signIn";
+export {
+  signInWithGitHub,
+  signInWithGoogle,
+  signInWithEmailPassword,
+  signUpWithEmailPassword,
+} from "./services/signIn";
 export { logOut } from "./services/logOut";
