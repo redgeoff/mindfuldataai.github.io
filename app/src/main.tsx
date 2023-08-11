@@ -6,18 +6,20 @@ import {
   useMutation,
 } from "@tanstack/react-query";
 import {
-  signInWithGitHub,
   signUpWithEmailPassword,
   signInWithEmailPassword,
   useAuth,
   logOut,
-  signInWithGoogle,
+  signInWithProvider,
+  AuthProvider,
+  useAvailableAuthProviders,
 } from "./domains/auth";
 import { Button, Card, Logo } from "./components";
 
 const App = () => {
   const { session } = useAuth();
   const { email } = session?.user ?? {};
+  const availableOAuthProviders: AuthProvider[] = useAvailableAuthProviders();
 
   const generateCode = useMutation(["code"], async () => {
     const resp = await fetch(
@@ -172,12 +174,20 @@ const App = () => {
               <div className="px-3 text-gray-500">or</div>
               <div className="w-full h-px bg-gray-300"></div>
             </div>
-            <Button onClick={signInWithGitHub}>
-              Sign {isCreatingAccount ? "up" : "in"} with GitHub
-            </Button>
-            <Button onClick={signInWithGoogle}>
-              Sign {isCreatingAccount ? "up" : "in"} with Google
-            </Button>
+            {/* Social login buttons */}
+            <div className="mb-4">
+              {availableOAuthProviders.map((provider) => (
+                <Button
+                  key={provider.providerId}
+                  onClick={() =>
+                    signInWithProvider({ provider: provider.providerId })
+                  }
+                >
+                  Sign {isCreatingAccount ? "up" : "in"} with {provider.name}
+                </Button>
+              ))}
+            </div>
+
           </>
         )}
         {email && (

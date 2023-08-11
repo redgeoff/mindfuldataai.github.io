@@ -1,4 +1,7 @@
 import { supabaseClient } from "../../../supabase";
+import type { Provider } from "@supabase/supabase-js";
+
+export type { Provider } from "@supabase/supabase-js";
 
 const getURL = () => {
   let url = window.location.href;
@@ -9,20 +12,6 @@ const getURL = () => {
   // Exclude everything after #
   url = url.split("#")[0];
   return url;
-};
-
-export const signInWithGitHub = async () => {
-  const { data, error } = await supabaseClient.auth.signInWithOAuth({
-    provider: "github",
-    options: {
-      redirectTo: getURL(),
-    },
-  });
-  if (error) {
-    console.log(error);
-    return;
-  }
-  console.log(data);
 };
 
 export const signUpWithEmailPassword = async ({
@@ -66,9 +55,13 @@ export const signInWithEmailPassword = async ({
   return {};
 };
 
-export const signInWithGoogle = async () => {
+export const signInWithProvider = async ({
+  provider,
+}: {
+  provider: Provider;
+}) => {
   const { data, error } = await supabaseClient.auth.signInWithOAuth({
-    provider: "google",
+    provider,
     options: {
       redirectTo: getURL(),
     },

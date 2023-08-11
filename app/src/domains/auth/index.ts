@@ -1,7 +1,8 @@
 export { useAuth } from "./hooks/useAuth";
+export type { AuthProvider } from "./hooks/useAvailableAuthProviders";
+export { useAvailableAuthProviders } from "./hooks/useAvailableAuthProviders";
 export {
-  signInWithGitHub,
-  signInWithGoogle,
+  signInWithProvider,
   signInWithEmailPassword,
   signUpWithEmailPassword,
 } from "./services/signIn";
