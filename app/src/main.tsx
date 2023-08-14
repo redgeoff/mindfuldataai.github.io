@@ -15,6 +15,7 @@ import {
   useAvailableAuthProviders,
 } from "./domains/auth";
 import { Button, Card, Logo } from "./components";
+import { useGA4Event } from "./hooks/useGA4Event";
 
 const App = () => {
   const { session } = useAuth();
@@ -40,6 +41,14 @@ const App = () => {
   });
 
   const [error, setError] = React.useState<string | null>(null);
+
+  const { sendEvent } = useGA4Event();
+  useEffect(() => {
+    // If we have an email, we should send an event to GA4
+    if (email) {
+      sendEvent("login", {});
+    }
+  }, [email]);
 
   useEffect(() => {
     // Got this when redirected from openai
@@ -187,7 +196,6 @@ const App = () => {
                 </Button>
               ))}
             </div>
-
           </>
         )}
         {email && (
