@@ -24,7 +24,7 @@ const App = () => {
 
   const generateCode = useMutation(["code"], async () => {
     const resp = await fetch(
-      "https://stage-chatgpt-plugin.mindfuldataai.com/oauth/code",
+      "https://chatgpt-plugin.mindfuldataai.com/oauth/code",
       {
         method: "POST",
         headers: {
