@@ -1,0 +1,531 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-L7T4606GJ0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-L7T4606GJ0');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MindfulDataAI - ChatGPT for business</title>
+  <link href="output.css" rel="stylesheet">
+  <link rel="shortcut icon" href=img/favicon.png>
+
+  <!-- <meta itemprop=name content="MindfulDataAI">
+  <meta itemprop=description content="ChatGPT for business"> -->
+
+  <meta name=twitter:card content="summary_large_image">
+  <meta name=twitter:image content="https://mindfuldataai.com/img/MindfulDataAILogoOG.png">
+  <meta name=twitter:title content="MindfulDataAI">
+  <meta name=twitter:description content="ChatGPT for business">
+  
+  <meta property="og:title" content="MindfulDataAI">
+  <meta property="og:description" content="ChatGPT for business">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mindfuldataai.com/">
+  <meta property="og:image" content="https://mindfuldataai.com/img/MindfulDataAILogoOG.png">
+
+  <meta name="description" content="ChatGPT for business">
+</head>
+<body>
+
+  <div class="bg-white">
+    <header class="fixed inset-x-0 top-0 z-50 bg-white">
+      <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+        <div class="flex lg:flex-1">
+          <a href="index.html" class="-m-1.5 p-1.5">
+            <span class="sr-only">MindfulData</span>
+            <!-- <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt=""> -->
+            <!-- <img class="h-8 w-auto" src="img/MindfulDataLogo.svg" alt="MindfulData"> -->
+            <img class="h-8 w-auto" src="img/MindfulDataAILogo.svg" alt="MindfulData">
+          </a>
+          <!-- <span class="mx-4 my-1 text-indigo-600 font-semibold">MindfulData</span> -->
+        </div>
+        <!-- <div class="flex lg:hidden">
+          <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+            <span class="sr-only">Open main menu</span>
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          </button>
+        </div> -->
+        <div class="hidden lg:flex lg:gap-x-12">
+          <a href="slack-app.html" class="text-sm font-semibold leading-6 text-gray-900">Slack App</a>
+          <a href="chatgpt-plugin.html" class="text-sm font-semibold leading-6 text-gray-900">ChatGPT Plugin</a>
+          <a href="#integrations" class="text-sm font-semibold leading-6 text-gray-900">Integrations</a>
+          <a href="#how" class="text-sm font-semibold leading-6 text-gray-900">How does it work?</a>
+          <a href="#enterprise" class="text-sm font-semibold leading-6 text-gray-900">Enterprise AI</a>
+          <a href="contact-us.html" class="text-sm font-semibold leading-6 text-gray-900">Contact Us</a>
+        </div>
+        <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+          <a href="slack-app.html" class="text-sm font-semibold leading-6 text-gray-900">Signup <span aria-hidden="true">&rarr;</span></a>
+        </div>
+      </nav>
+      <!-- Mobile menu, show/hide based on menu open state. -->
+      <!-- <div class="lg:hidden" role="dialog" aria-modal="true"> -->
+        <!-- Background backdrop, show/hide based on slide-over state. -->
+        <!-- <div class="fixed inset-0 z-50"></div>
+        <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+          <div class="flex items-center justify-between">
+            <a href="#" class="-m-1.5 p-1.5">
+              <span class="sr-only">MindfulData</span>
+              <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="">
+            </a>
+            <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+              <span class="sr-only">Close menu</span>
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <div class="mt-6 flow-root">
+            <div class="-my-6 divide-y divide-gray-500/10">
+              <div class="space-y-2 py-6">
+                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Integrations</a>
+                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">How does it work?</a>
+              </div>
+              <div class="py-6">
+                <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Signup</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+    </header>
+  
+    <div class="relative isolate px-6 pt-14 lg:px-8">
+      <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
+        <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+      </div>
+      <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+        <!-- <div class="hidden sm:mb-8 sm:flex sm:justify-center">
+          <div class="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+            Announcing our next round of funding. <a href="#" class="font-semibold text-indigo-600"><span class="absolute inset-0" aria-hidden="true"></span>Read more <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </div> -->
+        <div class="text-center">
+          <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">ChatGPT for business</h1>
+          <p class="mt-6 text-lg leading-8 text-gray-600">ChatGPT, equipped with your data and the ability to search the web</p>
+          <div class="mt-10 flex items-center justify-center gap-x-6">
+            <a href="slack-app.html" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Signup</a>
+            <!-- <a href="slack-app.html" class="text-sm font-semibold leading-6 text-gray-900">Learn more <span aria-hidden="true">→</span></a> -->
+          </div>
+        </div>
+      </div>
+      <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]" aria-hidden="true">
+        <div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Banner: try our ChatGPT plugin! -->
+  <div class="bg-gradient-to-r from-[#ff80b5] to-[#9089fc]">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="py-12 sm:py-16 lg:py-20">
+        <div class="max-w-3xl mx-auto text-center">
+          <h2 class="text-3xl font-semibold leading-9 text-white">Using Slack? Try our new Slack App, Arty</h2>
+          <!-- <p class="mt-4 text-lg leading-7 text-white">Arty is an AI assistant that has access to the web and your documents, turbocharging your team's productivity!</p> -->
+          <p class="mt-4 text-lg leading-7 text-white">Arty is an AI assistant that has access to the web and your chats, turbocharging your team's productivity!</p>
+          <div class="mt-6">
+            <a href="slack-app.html" class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-indigo-600 shadow-sm hover:bg-gray-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a id="integrations"></a>
+  <div class="bg-white py-24 sm:py-32">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <h2 class="text-center text-lg font-semibold leading-8 text-gray-900">Secure integrations with:</h2>
+      <div class="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5 text-gray-500">
+        <div class="col-span-2 lg:col-span-1 text-center">
+          <img class="max-h-12 w-full object-contain" src="img/salesforce-logo.png" alt="Salesforce" width="158" height="48">
+          <div class="my-3">Salesforce</div>
+        </div>
+        <div class="col-span-2 lg:col-span-1 text-center">
+          <img class="max-h-12 w-full object-contain" src="img/Google_Drive_logo.png" alt="Google Drive" width="158" height="48">
+          <div class="my-3">Google Drive</div>
+        </div>
+        <div class="col-span-2 lg:col-span-1 text-center">
+          <img class="max-h-12 w-full object-contain" src="img/Microsoft_Office_OneDrive_(2019–present).svg.png" alt="Microsoft OneDrive" width="158" height="48">
+          <div class="my-3">Microsoft OneDrive</div>
+        </div>
+        <div class="col-span-2 lg:col-span-1 text-center">
+          <img class="max-h-12 w-full object-contain" src="img/slack-logo-icon.png" alt="Slack" width="158" height="48">
+          <div class="my-3">Slack</div>
+        </div>
+        <div class="col-span-2 lg:col-span-1 text-center">
+          <img class="max-h-12 w-full object-contain" src="img/ServiceNow-Logo.png" alt="ServiceNow" width="158" height="48">
+          <div class="my-3">ServiceNow</div>
+        </div>
+
+        <div class="col-span-2 lg:col-span-1 text-center">
+          <img class="max-h-12 w-full object-contain" src="img/zendesk.png" alt="Zendesk" width="158" height="48">
+          <div class="my-3">Zendesk</div>
+        </div>
+        <div class="col-span-2 lg:col-span-1 text-center">
+          <img class="max-h-12 w-full object-contain" src="img/GitHub-Mark.png" alt="GitHub" width="158" height="48">
+          <div class="my-3">GitHub</div>
+        </div>
+        <div class="col-span-2 lg:col-span-1 text-center">
+          <img class="max-h-12 w-full object-contain" src="img/jira-software-logo-jira-logo-hd-png.webp" alt="Jira" width="158" height="48">
+          <div class="my-3">Jira</div>
+        </div>
+        <div class="col-span-2 lg:col-span-1 text-center">
+          <img class="max-h-12 w-full object-contain" src="img/Microsoft_Office_Teams_(2018–present).svg.png" alt="Microsoft Teams" width="158" height="48">
+          <div class="my-3">Microsoft Teams</div>
+        </div>
+        <div class="col-span-2 lg:col-span-1 text-center">
+          <img class="max-h-12 w-full object-contain" src="img/OKTA-8b49bf18.png" alt="Okta" width="158" height="48">
+          <div class="my-3">Okta</div>
+        </div>
+
+        <div class="col-span-2 lg:col-span-1 text-center">
+          <img class="max-h-12 w-full object-contain" src="img/auth0.png" alt="Auth0" width="158" height="48">
+          <div class="my-3">Auth0</div>
+        </div>
+        <div class="col-span-2 lg:col-span-1 text-center">
+          <img class="max-h-12 w-full object-contain" src="img/discord.png" alt="Discord" width="158" height="48">
+          <div class="my-3">Discord</div>
+        </div>
+        <div class="col-span-2 lg:col-span-1 text-center">
+          <img class="max-h-12 w-full object-contain" src="img/confluence-logo-D9B07137C2-seeklogo.com.png" alt="Confluence" width="158" height="48">
+          <div class="my-3">Confluence</div>
+        </div>
+        <div class="col-span-2 lg:col-span-1 text-center">
+          <img class="max-h-12 w-full object-contain" src="img/SAP_2011_logo.svg.png" alt="SAP" width="158" height="48">
+          <div class="my-3">SAP</div>
+        </div>
+        <div class="col-span-2 lg:col-span-1 text-center">
+          <img class="max-h-12 w-full object-contain" src="img/WDAY-f35396ad.png" alt="Workday" width="158" height="48">
+          <div class="my-3">Workday</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Banner: try our ChatGPT plugin! -->
+  <div class="bg-gradient-to-r from-[#ff80b5] to-[#9089fc]">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="py-12 sm:py-16 lg:py-20">
+        <div class="max-w-3xl mx-auto text-center">
+          <h2 class="text-3xl font-semibold leading-9 text-white">Try our ChatGPT plugin!</h2>
+          <p class="mt-4 text-lg leading-7 text-white">Discover MindfulDataAI, our awesome ChatGPT Plugin! Find it in the OpenAI Plugin Store. Search with Google now and get ready for more exciting features in the future!</p>
+          <div class="mt-6">
+            <a href="chatgpt-plugin.html" class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-indigo-600 shadow-sm hover:bg-gray-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a id="how"></a>
+  <div class="overflow-hidden bg-white py-24 sm:py-32">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+        <div class="lg:pr-8 lg:pt-4">
+          <div class="lg:max-w-lg">
+            <h2 class="text-base font-semibold leading-7 text-indigo-600">How does it work?</h2>
+            <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Turbo charge your productivity</p>
+            <!-- <p class="mt-6 text-lg leading-8 text-gray-600">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.</p> -->
+            <dl class="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
+              <div class="relative pl-9">
+                <dt class="inline font-semibold text-gray-900">
+                  <svg class="absolute left-1 top-1 h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M5.5 17a4.5 4.5 0 01-1.44-8.765 4.5 4.5 0 018.302-3.046 3.5 3.5 0 014.504 4.272A4 4 0 0115 17H5.5zm3.75-2.75a.75.75 0 001.5 0V9.66l1.95 2.1a.75.75 0 101.1-1.02l-3.25-3.5a.75.75 0 00-1.1 0l-3.25 3.5a.75.75 0 101.1 1.02l1.95-2.1v4.59z" clip-rule="evenodd" />
+                  </svg>
+                  Connect to your data sources
+                </dt>
+                <dd class="inline"></dd>
+              </div>
+              <div class="relative pl-9">
+                <dt class="inline font-semibold text-gray-900">
+                  <svg class="absolute left-1 top-1 h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M10 1a4.5 4.5 0 00-4.5 4.5V9H5a2 2 0 00-2 2v6a2 2 0 002 2h10a2 2 0 002-2v-6a2 2 0 00-2-2h-.5V5.5A4.5 4.5 0 0010 1zm3 8V5.5a3 3 0 10-6 0V9h6z" clip-rule="evenodd" />
+                  </svg>
+                  Control who has access
+                </dt>
+                <dd class="inline"></dd>
+              </div>
+              <div class="relative pl-9">
+                <dt class="inline font-semibold text-gray-900">
+                  <svg class="absolute left-1 top-1 h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path d="M3.505 2.365A41.369 41.369 0 019 2c1.863 0 3.697.124 5.495.365 1.247.167 2.18 1.108 2.435 2.268a4.45 4.45 0 00-.577-.069 43.141 43.141 0 00-4.706 0C9.229 4.696 7.5 6.727 7.5 8.998v2.24c0 1.413.67 2.735 1.76 3.562l-2.98 2.98A.75.75 0 015 17.25v-3.443c-.501-.048-1-.106-1.495-.172C2.033 13.438 1 12.162 1 10.72V5.28c0-1.441 1.033-2.717 2.505-2.914z" />
+                    <path d="M14 6c-.762 0-1.52.02-2.271.062C10.157 6.148 9 7.472 9 8.998v2.24c0 1.519 1.147 2.839 2.71 2.935.214.013.428.024.642.034.2.009.385.09.518.224l2.35 2.35a.75.75 0 001.28-.531v-2.07c1.453-.195 2.5-1.463 2.5-2.915V8.998c0-1.526-1.157-2.85-2.729-2.936A41.645 41.645 0 0014 6z" />
+                  </svg> 
+                  Ask ChatGPT about your data.
+                </dt>
+                <dd class="inline">It answers and provides a link to to the relevant docs</dd>
+              </div>
+              <div class="relative pl-9">
+                <dt class="inline font-semibold text-gray-900">
+                  <svg class="absolute left-1 top-1 h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path d="M8 10a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z" />
+                    <path fill-rule="evenodd" d="M4.5 2A1.5 1.5 0 003 3.5v13A1.5 1.5 0 004.5 18h11a1.5 1.5 0 001.5-1.5V7.621a1.5 1.5 0 00-.44-1.06l-4.12-4.122A1.5 1.5 0 0011.378 2H4.5zm5 5a3 3 0 101.524 5.585l1.196 1.195a.75.75 0 101.06-1.06l-1.195-1.196A3 3 0 009.5 7z" clip-rule="evenodd" />
+                  </svg>
+                  Nothing found?
+                </dt>
+                <dd class="inline">Search the web to find the answer</dd>
+              </div>
+            </dl>
+
+            <div class="mt-10 flex gap-x-6">
+              <a href="slack-app.html" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Signup</a>
+              <!-- <a href="slack-app.html" class="text-sm font-semibold leading-6 text-gray-900">Signup <span aria-hidden="true">&rarr;</span></a> -->
+            </div>
+          </div>
+        </div>
+        <img src="img/mindful-screen-competitor.png" alt="MindfulDataAI Jira Status" class="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0" width="2432" height="1442">
+      </div>
+    </div>
+  </div>
+
+  <a id="enterprise"></a>
+  <div class="bg-white py-24 sm:py-32">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl lg:text-center">
+        <h2 class="text-base font-semibold leading-7 text-indigo-600">Enterprise AI</h2>
+        <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Everything you need to run ChatGPT for business</p>
+        <p class="mt-6 text-lg leading-8 text-gray-600">Security and compliance</p>
+      </div>
+      <div class="mx-auto max-w-4xl lg:text-center my-8 overflow-hidden">
+        <img src="img/mindful-screen-jira.png" alt="MindfulDataAI Jira Status" class="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0" width="2432" height="1442">
+      </div>
+      <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
+        <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
+          <div class="relative pl-16">
+            <dt class="text-base font-semibold leading-7 text-gray-900">
+              <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+                <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
+                </svg>
+              </div>
+              Data changes are automatically synced
+            </dt>
+            <dd class="mt-2 text-base leading-7 text-gray-600"></dd>
+          </div>
+          <div class="relative pl-16">
+            <dt class="text-base font-semibold leading-7 text-gray-900">
+              <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+                <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+                </svg>
+              </div>
+              Your data remains yours and is not used to retrain ChatGPT
+            </dt>
+            <dd class="mt-2 text-base leading-7 text-gray-600"></dd>
+          </div>
+          <div class="relative pl-16">
+            <dt class="text-base font-semibold leading-7 text-gray-900">
+              <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+                <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                </svg>
+              </div>
+              Use SSO with your existing identity provider
+            </dt>
+            <dd class="mt-2 text-base leading-7 text-gray-600"></dd>
+          </div>
+          <div class="relative pl-16">
+            <dt class="text-base font-semibold leading-7 text-gray-900">
+              <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+                <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+                </svg>
+              </div>
+              SOC2 compliance
+            </dt>
+            <dd class="mt-2 text-base leading-7 text-gray-600"></dd>
+          </div>
+        </dl>
+
+        <div class="mt-20 flex items-center justify-center gap-x-6">
+          <!-- <a href="slack-app.html" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Signup</a> -->
+          <a href="slack-app.html" class="text-sm font-semibold leading-6 text-gray-900">Signup <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <a id="industries"></a>
+  <div class="bg-white py-12 sm:py-16">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl lg:text-center">
+        <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Here are some of the industries benefiting from ChatGPT:</p>
+      </div>
+      <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
+        <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
+          <div class="relative pl-16">
+            <dt class="text-base font-semibold leading-7 text-gray-900">
+              <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 text-indigo-600">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>                
+              </div>
+              Office and administrative support
+            </dt>
+            <dd></dd>
+          </div>
+          <div class="relative pl-16">
+            <dt class="text-base font-semibold leading-7 text-gray-900">
+              <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 text-indigo-600">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>                
+              </div>
+              Legal
+            </dt>
+            <dd></dd>
+          </div>
+          <div class="relative pl-16">
+            <dt class="text-base font-semibold leading-7 text-gray-900">
+              <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 text-indigo-600">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>                
+              </div>
+              Architecture and engineering
+            </dt>
+            <dd></dd>
+          </div>
+          <div class="relative pl-16">
+            <dt class="text-base font-semibold leading-7 text-gray-900">
+              <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 text-indigo-600">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>                
+              </div>
+              Life, physical, social science
+            </dt>
+            <dd></dd>
+          </div>
+          <div class="relative pl-16">
+            <dt class="text-base font-semibold leading-7 text-gray-900">
+              <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 text-indigo-600">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>                
+              </div>
+              Business and financial operations
+            </dt>
+            <dd></dd>
+          </div>
+          <div class="relative pl-16">
+            <dt class="text-base font-semibold leading-7 text-gray-900">
+              <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 text-indigo-600">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>                
+              </div>
+              Community and social service
+            </dt>
+            <dd></dd>
+          </div>
+          <div class="relative pl-16">
+            <dt class="text-base font-semibold leading-7 text-gray-900">
+              <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 text-indigo-600">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>                
+              </div>
+              Management
+            </dt>
+            <dd></dd>
+          </div>
+          <div class="relative pl-16">
+            <dt class="text-base font-semibold leading-7 text-gray-900">
+              <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 text-indigo-600">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>                
+              </div>
+              Sales and related
+            </dt>
+            <dd></dd>
+          </div>
+          <div class="relative pl-16">
+            <dt class="text-base font-semibold leading-7 text-gray-900">
+              <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 text-indigo-600">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>                
+              </div>
+              Computer and mathematical
+            </dt>
+            <dd></dd>
+          </div>
+          <div class="relative pl-16">
+            <dt class="text-base font-semibold leading-7 text-gray-900">
+              <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 text-indigo-600">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>                
+              </div>
+              Farming, fishing, and forestry
+            </dt>
+            <dd></dd>
+          </div>
+        </dl>
+
+        <div class="mt-20 flex items-center justify-center gap-x-6">
+          <a href="slack-app.html" class="text-sm font-semibold leading-6 text-gray-900">Signup <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <footer class="bg-gray-100 mt-40 pt-10 pb-40">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl lg:text-center">
+        <h2 class="text-base font-semibold leading-7 text-gray-500">© 2023 MindfulDataAI, Inc. All rights reserved.</h2>
+        <div class="flex justify-center space-x-4 mt-2">
+          <a href="contact-us.html" class="text-gray-400 hover:text-gray-300">Contact Us</a>
+          <a href="privacy-policy.html" class="text-gray-400 hover:text-gray-300">Privacy Policy</a>
+          <a href="terms-and-conditions.html" class="text-gray-400 hover:text-gray-300">Terms and Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function hideConsent() {
+      document.getElementById('consent').style.visibility = 'hidden'
+    }
+  </script>
+  <div id="consent" class="fixed bottom-0 inset-x-0 z-50 overflow-hidden bg-white">
+    <div class="relative container px-4 mx-auto">
+      <!-- <img class="absolute bottom-0 right-0 lg:left-0" src="saturn-assets/images/cookies/cookies-big.svg" alt=""> -->
+      <div class="relative py-10 max-w-4xl mx-auto">
+        <div class="flex flex-wrap -mx-4 items-center">
+          <div class="w-full lg:w-2/3 px-4 mb-8 lg:mb-0">
+            <div class="lg:ml-auto xl:ml-0 max-w-md">
+              <p class="text-gray-500 mb-3">By clicking &quot;Accept all cookies&quot; you consent to cookies being stored on your device to improve website.</p>
+              <!-- <a class="inline-flex items-center text-orange-900 hover:text-gray-700 font-semibold" href="#">
+                <span class="mr-3">Read Our Data Policy</span>
+                <svg width="13" height="13" viewbox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.92 0.62C12.8185 0.375651 12.6243 0.181475 12.38 0.0799999C12.2598 0.028759 12.1307 0.00157999 12 0H2C1.73478 0 1.48043 0.105357 1.29289 0.292893C1.10536 0.48043 1 0.734784 1 1C1 1.26522 1.10536 1.51957 1.29289 1.70711C1.48043 1.89464 1.73478 2 2 2H9.59L1.29 10.29C1.19627 10.383 1.12188 10.4936 1.07111 10.6154C1.02034 10.7373 0.994202 10.868 0.994202 11C0.994202 11.132 1.02034 11.2627 1.07111 11.3846C1.12188 11.5064 1.19627 11.617 1.29 11.71C1.38296 11.8037 1.49356 11.8781 1.61542 11.9289C1.73728 11.9797 1.86799 12.0058 2 12.0058C2.13201 12.0058 2.26272 11.9797 2.38458 11.9289C2.50644 11.8781 2.61704 11.8037 2.71 11.71L11 3.41V11C11 11.2652 11.1054 11.5196 11.2929 11.7071C11.4804 11.8946 11.7348 12 12 12C12.2652 12 12.5196 11.8946 12.7071 11.7071C12.8946 11.5196 13 11.2652 13 11V1C12.9984 0.869323 12.9712 0.740222 12.92 0.62Z" fill="currentColor"></path>
+                </svg>
+              </a> -->
+            </div>
+          </div>
+          <div class="w-full lg:w-1/3 px-4">
+            <div class="flex items-center lg:justify-end">
+              <a onclick="hideConsent()" class="inline-block mr-4 py-3 px-5 text-sm font-semibold text-orange-900 border border-gray-200 rounded-md hover:border-orange-900 transition duration-200" href="#">Decline</a>
+              <a onclick="hideConsent()" class="inline-block py-3 px-5 text-sm font-semibold text-orange-50 bg-indigo-500 hover:bg-gray-900 rounded-md transition duration-200" href="#">Accept all cookies</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/utils.js?4"></script>
+</body>
+</html>
